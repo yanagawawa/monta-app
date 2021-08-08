@@ -1,0 +1,2 @@
+class TakeLessonGenre < ApplicationRecord
+end
