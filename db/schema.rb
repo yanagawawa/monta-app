@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_08_08_065803) do
 
   create_table "lesson_genres", force: :cascade do |t|
-    t.integer "genre"
+    t.integer "genre", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -23,29 +23,29 @@ ActiveRecord::Schema.define(version: 2021_08_08_065803) do
     t.integer "user_id"
     t.integer "lesson_genre_id"
     t.integer "take_lesson_genre_id"
-    t.string "title"
-    t.string "lesson_word"
+    t.string "title", default: "", null: false
+    t.string "lesson_word", default: "", null: false
     t.datetime "start"
     t.datetime "end"
     t.integer "total_time"
-    t.integer "total_people"
+    t.integer "total_people", default: 1, null: false
     t.string "lesson_location"
-    t.text "lesson_details"
-    t.text "belongings"
-    t.integer "lesson_status"
+    t.text "lesson_details", default: "", null: false
+    t.text "belongings", default: "", null: false
+    t.integer "lesson_status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "rooms", force: :cascade do |t|
     t.integer "trainer_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
   end
 
   create_table "take_lesson_genres", force: :cascade do |t|
-    t.integer "genre"
+    t.integer "genre", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -56,10 +56,10 @@ ActiveRecord::Schema.define(version: 2021_08_08_065803) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "first_name_kana"
-    t.string "last_name_kana"
+    t.string "first_name", default: "", null: false
+    t.string "last_name", default: "", null: false
+    t.string "first_name_kana", default: "", null: false
+    t.string "last_name_kana", default: "", null: false
     t.string "profile_image"
     t.string "pr_image"
     t.text "pr_comment"
@@ -76,10 +76,10 @@ ActiveRecord::Schema.define(version: 2021_08_08_065803) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "first_name_kana"
-    t.string "last_name_kana"
+    t.string "first_name", default: "", null: false
+    t.string "last_name", default: "", null: false
+    t.string "first_name_kana", default: "", null: false
+    t.string "last_name_kana", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

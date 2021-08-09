@@ -1,14 +1,14 @@
 class HomesController < ApplicationController
-  
+
   def top
-  end  
-  
+  end
+
   def about
-    
+
   end
-  
+
   def torainer_about
-    
+
   end
-  
+
 end
