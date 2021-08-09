@@ -39,7 +39,7 @@ class DeviseCreateTrainers < ActiveRecord::Migration[5.2]
       t.string :profile_image
       t.string :pr_image
       t.text :pr_comment
-      t.text :prefectures
+      t.string :prefectures
 
       t.timestamps null: false
     end

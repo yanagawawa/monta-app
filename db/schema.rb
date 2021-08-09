@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2021_08_08_065803) do
     t.string "profile_image"
     t.string "pr_image"
     t.text "pr_comment"
-    t.text "prefectures"
+    t.string "prefectures"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_trainers_on_email", unique: true

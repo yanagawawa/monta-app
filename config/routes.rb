@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root to: 'homes#top'
   get '/about' => 'homes#about'
-  get '/torainer_about' => 'homes#torainer_about'
+  get '/trainer_about' => 'homes#trainer_about'
 
   namespace :trainer do
 
@@ -11,6 +11,8 @@ Rails.application.routes.draw do
    registrations: "trainer/trainers/registrations",
    passwords: "trainer/trainers/passwords"
   }
+   resources :trainers, only: [:show, :edit, :update]
+   get 'trainers/history' => 'trainers#history'
 
   resources :lessons, only: [:new, :create, :edit, :update]
 

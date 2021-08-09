@@ -7,7 +7,7 @@ class HomesController < ApplicationController
 
   end
 
-  def torainer_about
+  def trainer_about
 
   end
 
