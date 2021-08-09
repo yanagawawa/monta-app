@@ -20,9 +20,9 @@ Rails.application.routes.draw do
   scope module: :public do
 
   devise_for :users, controllers: {
-   sessions:      "users/sessions",
-   registrations: "users/registrations",
-   passwords: "users/passwords"
+   sessions:      "public/users/sessions",
+   registrations: "public/users/registrations",
+   passwords: "public/users/passwords"
  }
 
   resources :lessons, only: [:index, :show]
