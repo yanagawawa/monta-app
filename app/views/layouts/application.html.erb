@@ -13,7 +13,7 @@
     <header>
       <nav>
         <div>
-          <%= link_to "HOME", "/" %>
+          <%= link_to "HOME", root_path %>
         </div>
         <ul>
           <% if user_signed_in? %>
@@ -23,7 +23,7 @@
             <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <% elsif trainer_trainer_signed_in? %>
             <li>トレーナー</li>
-            <li><%= link_to "アバウト",  torainer_about_path %></li>
+            <li><%= link_to "アバウト",  trainer_about_path %></li>
             <li><%= link_to "ログアウト", destroy_trainer_trainer_session_path, method: :delete %></li>
           <% else %>
             <li>ユーザー</li>

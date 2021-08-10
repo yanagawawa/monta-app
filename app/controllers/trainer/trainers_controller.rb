@@ -1,5 +1,6 @@
 class Trainer::TrainersController < ApplicationController
   def show
+    @trainer = current_trainer_trainer
   end
 
   def edit

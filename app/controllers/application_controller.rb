@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     case resource
     when Trainer
-      trainer_trainer_path
+      trainer_trainer_path(:resource)
     when User
       customers_my_page_path
     end
@@ -17,6 +17,12 @@ class ApplicationController < ActionController::Base
     else
       root_path
     end
+  end
+
+   protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:last_name, :first_name, :last_name_kana, :first_name_kana])
   end
 
 end

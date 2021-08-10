@@ -1,8 +1,8 @@
 <h2>トレーナー新規登録</h2>
 
-<%= form_with model: @trainers, url: trainer_trainer_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-<!--%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %-->
-  <!--%= render "trainers/shared/error_messages", resource: resource %>-->
+<%= form_with model: @trainer, url: "/trainer/trainers", id: 'new_user', class: 'new_user', local: true do |f| %>
+<!--%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>-->
+
 
 
    <p class="col-sm-3">名前</p>
@@ -53,4 +53,3 @@
   </div>
 <% end %>
 
-<!--%= render "trainers/shared/links" %>-->
