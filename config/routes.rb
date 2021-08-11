@@ -16,7 +16,6 @@ Rails.application.routes.draw do
 
   resources :lessons, only: [:new, :create, :edit, :update]
 
-
   end
 
   scope module: :public do
@@ -27,6 +26,7 @@ Rails.application.routes.draw do
    passwords: "public/users/passwords"
  }
 
+ resources :lesson_trainers, only: [:index, :show, :create]
   resources :lessons, only: [:index, :show]
   get '/calendar' => 'lessons#calendar'
 

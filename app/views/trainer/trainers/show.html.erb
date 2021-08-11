@@ -1,4 +1,8 @@
 <h1>Trainer::Trainers#show</h1>
+
+
+<%= link_to "マイページ", trainer_trainer_path(@trainer) %>
+<%= link_to "トレーナー編集", edit_trainer_trainer_path(@trainer) %>
 <div>
-<%= @trainer.id %>
+<%= @trainer.first_name %>
 </div>

@@ -4,9 +4,16 @@ class Trainer::TrainersController < ApplicationController
   end
 
   def edit
+    @trainer = current_trainer_trainer
   end
 
   def update
+    @trainer = current_trainer_trainer
+    if @customer.update(trainer_params)
+      redirect_to  trainer_trainer_path(@trainer)
+    else
+      render 'edit'
+    end
   end
 
   def history
