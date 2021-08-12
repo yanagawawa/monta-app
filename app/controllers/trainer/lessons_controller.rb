@@ -1,6 +1,8 @@
 class Trainer::LessonsController < ApplicationController
 
   def new
+   @lesson = Lesson.new
+   @trainer = current_trainer_trainer
 
   end
 
@@ -15,6 +17,11 @@ class Trainer::LessonsController < ApplicationController
   def update
 
   end
+
+  private
+    def lesson_params
+      params.require(:lesson).permit(:title, :lesson_word, :start, :end, :total_time, :total_people, :lesson_location, :lesson_details, :belongings, :lesson_status)
+    end
 
 
 end

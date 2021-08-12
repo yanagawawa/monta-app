@@ -60,10 +60,11 @@ ActiveRecord::Schema.define(version: 2021_08_08_065803) do
     t.string "last_name", default: "", null: false
     t.string "first_name_kana", default: "", null: false
     t.string "last_name_kana", default: "", null: false
-    t.string "profile_image"
-    t.string "pr_image"
+    t.string "profile_image_id"
+    t.string "pr_image_id"
     t.text "pr_comment"
     t.string "prefectures"
+    t.text "result"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_trainers_on_email", unique: true

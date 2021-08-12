@@ -7,13 +7,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag('favicon.ico') %>
   </head>
 
   <body>
     <header>
       <nav>
         <div>
-          <%= link_to "HOME", root_path %>
+          <%= link_to root_path do %>
+          <%= image_tag 'monta_logo.png' %>
+          <% end %>
         </div>
         <ul>
           <% if user_signed_in? %>
@@ -24,6 +27,7 @@
           <% elsif trainer_trainer_signed_in? %>
             <li>トレーナー</li>
             <li><%= link_to "アバウト",  trainer_about_path %></li>
+            <li><%= link_to "マイページ", trainer_trainer_path(current_trainer_trainer.id) %></li>
             <li><%= link_to "ログアウト", destroy_trainer_trainer_session_path, method: :delete %></li>
           <% else %>
             <li>ユーザー</li>

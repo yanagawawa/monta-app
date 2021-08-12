@@ -36,11 +36,13 @@ class DeviseCreateTrainers < ActiveRecord::Migration[5.2]
       t.string :last_name, default: "", null: false
       t.string :first_name_kana, default: "", null: false
       t.string :last_name_kana, default: "", null: false
-      t.string :profile_image
-      t.string :pr_image
+      t.string :profile_image_id
+      t.string :pr_image_id
       t.text :pr_comment
       t.string :prefectures
-
+      t.text :result
+      
+      
       t.timestamps null: false
     end
 

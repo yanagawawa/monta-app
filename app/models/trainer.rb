@@ -11,6 +11,7 @@ class Trainer < ApplicationRecord
           validates :first_name, presence: true
           validates :last_name_kana, presence: true
           validates :first_name_kana, presence: true
+
           attachment :profile_image
           attachment :pr_image
 
